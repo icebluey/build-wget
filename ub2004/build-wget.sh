@@ -611,10 +611,10 @@ _build_openssl30() {
         find usr/bin/ -type f -exec file '{}' \; | sed -n -e 's/^\(.*\):[  ]*ELF.*, not stripped.*/\1/p' | xargs --no-run-if-empty -I '{}' /usr/bin/strip '{}'
     fi
     echo
-    install -m 0755 -d usr/lib64/wget/private
-    cp -af usr/lib64/*.so* usr/lib64/wget/private/
-    rm -f /usr/lib64/libssl.*
-    rm -f /usr/lib64/libcrypto.*
+    install -m 0755 -d usr/lib/x86_64-linux-gnu/wget/private
+    cp -af usr/lib/x86_64-linux-gnu/*.so* usr/lib/x86_64-linux-gnu/wget/private/
+    rm -f /usr/lib/x86_64-linux-gnu/libssl.*
+    rm -f /usr/lib/x86_64-linux-gnu/libcrypto.*
     rm -fr /usr/include/openssl
     rm -fr /usr/include/x86_64-linux-gnu/openssl
     #rm -fr /usr/local/openssl-1.1.1
