@@ -572,7 +572,7 @@ _build_openssl30() {
     mkdir -p usr/include/x86_64-linux-gnu/openssl
     chmod 0755 usr/include/x86_64-linux-gnu/openssl
     install -c -m 0644 usr/include/openssl/opensslconf.h usr/include/x86_64-linux-gnu/openssl/
-    sed 's|http://|https://|g' -i usr/lib64/pkgconfig/*.pc
+    sed 's|http://|https://|g' -i usr/lib/x86_64-linux-gnu/pkgconfig/*.pc
     if [[ "$(pwd)" = '/' ]]; then
         echo
         printf '\e[01;31m%s\e[m\n' "Current dir is '/'"
